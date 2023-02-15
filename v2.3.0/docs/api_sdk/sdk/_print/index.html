@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="../../../../docs/api_sdk/sdk/">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="../../../../favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="../../../../favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="../../../../favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="../../../../favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../../favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="../../../../favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="../../../../favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="../../../../favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../../favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="../../../../favicons/android-192x192.png" sizes="192x192">
+
+<title>CVAT Python SDK | CVAT</title>
+<meta name="description" content=""><meta property="og:title" content="CVAT Python SDK" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/api_sdk/sdk/" /><meta property="og:site_name" content="CVAT" />
+
+<meta itemprop="name" content="CVAT Python SDK">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CVAT Python SDK"/>
+<meta name="twitter:description" content=""/>
+
+
+
+
+<link rel="preload" href="../../../../scss/main.min.591a88c412fca6c692021fe322184768cfc320012e0a443e8514b68fd373aa21.css" as="style">
+<link href="../../../../scss/main.min.591a88c412fca6c692021fe322184768cfc320012e0a443e8514b68fd373aa21.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="../../../../css/prism.css"/>
+
+
+
+
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+
+
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="../../../../about/">
+    <span class="navbar-logo"><svg width="98" height="27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M101 0v29l-52.544.001C44.326 35.511 35.598 40 25.5 40 11.417 40 0 31.27.0 20.5S11.417 1 25.5 1c4.542.0 8.807.908 12.5 2.5V0h63z" id="logoA"/></defs><g transform="translate(-2 -1)" fill="none" fill-rule="evenodd"><mask id="logoB" fill="#fff"><use xlink:href="#logoA"/></mask><path d="M48.142 1c4.736.0 6.879 3.234 6.879 5.904v2.068h-4.737V6.904c0-.79-.789-2.144-2.142-2.144-1.654.0-2.368 1.354-2.368 2.144v15.192c0 .79.714 2.144 2.368 2.144 1.353.0 2.142-1.354 2.142-2.144v-2.068h4.737v2.068c0 2.67-2.143 5.904-6.88 5.904C42.956 28 41 24.766 41 22.134V6.904C41 4.234 42.955 1 48.142 1zM19-6c9.389.0 17 7.611 17 17s-7.611 17-17 17S2 20.389 2 11 9.611-6 19-6zm42.256 7.338 3.345 19.48h.075l3.42-19.48h5l-6.052 26.324h-5L56.22 1.338h5.037zm20.706.0 5.413 26.324h-4.699l-.94-6.13h-4.548l-.902 6.13h-4.435l5.413-26.324h4.698zm18.038.0v3.723h-4.849v22.6h-4.699v-22.6h-4.81V1.338H1e2zM19 4a7 7 0 100 14 7 7 0 000-14zm60.557 4.295h-.113l-1.466 9.439h3.007l-1.428-9.439z" fill="#fff" fill-rule="nonzero" mask="url(#logoB)"/></g></svg></span>
+  </a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+        
+        
+        
+        <a class="nav-link active" href="../../../../docs/" ><span class="active">Documentation</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+        
+        
+        
+        <a class="nav-link" href="../../../../about/" ><span>About</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+        
+        <a class="nav-link" href="https://app.cvat.ai"  ><span>Try it now</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+        
+        <a class="nav-link" href="https://github.com/cvat-ai/cvat"  ><i class='fab fa-github'></i><span>GitHub</span></a>
+      </li>
+      
+      
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-target="#dropdown_ver" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v2.3.0
+          </a>
+        </li>
+        
+      
+      
+    </ul>
+  </div>
+  <div class="dropdown-menu" id="dropdown_ver" aria-labelledby="navbarDropdownMenuLink">
+    
+      
+        <a class="dropdown-item" href="../../../../../docs/api_sdk/sdk/">Latest version</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v1.5.0/docs/api_sdk/sdk/">v1.5.0</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v1.6.0/docs/api_sdk/sdk/">v1.6.0</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v1.7.0/docs/api_sdk/sdk/">v1.7.0</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v2.0.0/docs/api_sdk/sdk/">v2.0.0</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v2.1.0/docs/api_sdk/sdk/">v2.1.0</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v2.2.0/docs/api_sdk/sdk/">v2.2.0</a>
+    
+      
+        <a class="dropdown-item" href="../../../../../v2.3.0/docs/api_sdk/sdk/">v2.3.0</a>
+    
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="../../../../offline-search-index.87a5bc91ce1834411bb43231b5a6e66a.json"
+  data-offline-search-base-href="../../../../"
+  data-offline-search-max-results="10"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="../../../../docs/api_sdk/sdk/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">CVAT Python SDK</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-3dab025f382bd285a2221aea7f3c70bb">SDK API Reference</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-44f45178320f3b4f994f5fdabf3fee83">Models</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-8230992378cdf4f17ad61d16f3c761cc">Low-level API</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-d52545cf80fdbb2198fed55d851a9e90">High-level API</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-d6ace9d6266b4c8cd2588a366fd7fad7">Developer guide</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="overview">Overview</h2>
+<p>CVAT SDK is a Python library. It provides you access to Python functions and objects that
+simplify server interaction and provide additional functionality like data validation
+and serialization.</p>
+<p>SDK API includes 2 layers:</p>
+<ul>
+<li>Low-level API with REST API wrappers. Located at <code>cvat_sdk.api_client</code>. <a href="../../../../docs/api_sdk/sdk/lowlevel-api">Read more</a></li>
+<li>High-level API. Located at <code>cvat_sdk.core</code>. <a href="../../../../docs/api_sdk/sdk/highlevel-api">Read more</a></li>
+</ul>
+<p>In general, the low-level API provides single-request operations, while the high-level one
+implements composite, multi-request operations, and provides local proxies for server objects.
+For most uses, the high-level API should be good enough, and it should be
+the right point to start your integration with CVAT.</p>
+<h2 id="installation">Installation</h2>
+<p>To install an <a href="https://pypi.org/project/cvat-sdk/">official release of CVAT SDK</a> use this command:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install cvat-sdk
+</code></pre></div><p>We support Python versions 3.7 - 3.9.</p>
+<h2 id="usage">Usage</h2>
+<p>To import package components, use the following code:</p>
+<p>For the high-level API:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">cvat_sdk</span>
+<span style="color:#8f5902;font-style:italic"># or</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">cvat_sdk.core</span>
+</code></pre></div><p>For the low-level API:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">cvat_sdk.api_client</span>
+</code></pre></div>
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3dab025f382bd285a2221aea7f3c70bb">1 - SDK API Reference</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-44f45178320f3b4f994f5fdabf3fee83">1.1 - Models</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8230992378cdf4f17ad61d16f3c761cc">2 - Low-level API</h1>
+    
+	<h2 id="overview">Overview</h2>
+<p>The low-level API is useful if you need to work directly with REST API, but want
+to have data validation and syntax assistance from your code editor. The code
+on this layer is autogenerated.</p>
+<p>Code of this component is located in <code>cvat_sdk.api_client</code>.</p>
+<h2 id="example">Example</h2>
+<p>Let&rsquo;s see how a task with local files can be created. We will use the basic auth
+to make things simpler.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">time</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">sleep</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.api_client</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">models</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">apis</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">exceptions</span>
+
+<span style="color:#000">configuration</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">host</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;http://localhost&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;YOUR_USERNAME&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;YOUR_PASSWORD&#39;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic"># Enter a context with an instance of the API client</span>
+<span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">configuration</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#8f5902;font-style:italic"># Parameters can be passed as a plain dict with JSON-serialized data</span>
+    <span style="color:#8f5902;font-style:italic"># or as model objects (from cvat_sdk.api_client.models), including</span>
+    <span style="color:#8f5902;font-style:italic"># mixed variants.</span>
+    <span style="color:#8f5902;font-style:italic">#</span>
+    <span style="color:#8f5902;font-style:italic"># In case of dicts, keys must be the same as members of models.I&lt;ModelName&gt;</span>
+    <span style="color:#8f5902;font-style:italic"># interfaces and values must be convertible to the corresponding member</span>
+    <span style="color:#8f5902;font-style:italic"># value types (e.g. a date or string enum value can be parsed from a string).</span>
+    <span style="color:#8f5902;font-style:italic">#</span>
+    <span style="color:#8f5902;font-style:italic"># In case of model objects, data must be of the corresponding</span>
+    <span style="color:#8f5902;font-style:italic"># models.&lt;ModelName&gt; types.</span>
+    <span style="color:#8f5902;font-style:italic">#</span>
+    <span style="color:#8f5902;font-style:italic"># Let&#39;s use a dict here. It should look like models.ITaskWriteRequest</span>
+    <span style="color:#000">task_spec</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;name&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;example task&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#34;labels&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+            <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;car&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#4e9a06">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#ff00ff&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#4e9a06">&#34;attributes&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+                <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#4e9a06">&#34;mutable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">True</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#4e9a06">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;number&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#4e9a06">&#34;default_value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#4e9a06">&#34;values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;4&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">]</span>
+                <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">]</span>
+        <span style="color:#000;font-weight:bold">}],</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+    <span style="color:#204a87;font-weight:bold">try</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#8f5902;font-style:italic"># Apis can be accessed as ApiClient class members</span>
+        <span style="color:#8f5902;font-style:italic"># We use different models for input and output data. For input data,</span>
+        <span style="color:#8f5902;font-style:italic"># models are typically called like &#34;*Request&#34;. Output data models have</span>
+        <span style="color:#8f5902;font-style:italic"># no suffix.</span>
+        <span style="color:#000;font-weight:bold">(</span><span style="color:#000">task</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">task_spec</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">except</span> <span style="color:#000">exceptions</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ApiException</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#8f5902;font-style:italic"># We can catch the basic exception type, or a derived type</span>
+        <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Exception when trying to create a task: </span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#8f5902;font-style:italic"># Here we will use models instead of a dict</span>
+    <span style="color:#000">task_data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DataRequest</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">image_quality</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">75</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">client_files</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span>
+            <span style="color:#204a87">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;image1.jpg&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;rb&#39;</span><span style="color:#000;font-weight:bold">),</span>
+            <span style="color:#204a87">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;image2.jpg&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;rb&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000;font-weight:bold">],</span>
+    <span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#8f5902;font-style:italic"># If we pass binary file objects, we need to specify content type.</span>
+    <span style="color:#8f5902;font-style:italic"># For this endpoint, we don&#39;t have response data</span>
+    <span style="color:#000;font-weight:bold">(</span><span style="color:#000">_</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create_data</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">id</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">data_request</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">task_data</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">_content_type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;multipart/form-data&#34;</span><span style="color:#000;font-weight:bold">,</span>
+
+        <span style="color:#8f5902;font-style:italic"># we can choose to check the response status manually</span>
+        <span style="color:#8f5902;font-style:italic"># and disable the response data parsing</span>
+        <span style="color:#000">_check_status</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#3465a4">False</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_parse_response</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#3465a4">False</span>
+    <span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#0000cf;font-weight:bold">202</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">msg</span>
+
+    <span style="color:#8f5902;font-style:italic"># Wait till task data is processed</span>
+    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">_</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000;font-weight:bold">(</span><span style="color:#000">status</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve_status</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">id</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">status</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">state</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">value</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;Finished&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;Failed&#39;</span><span style="color:#000;font-weight:bold">]:</span>
+            <span style="color:#204a87;font-weight:bold">break</span>
+        <span style="color:#000">sleep</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.1</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">status</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">state</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">value</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;Finished&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">status</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">message</span>
+
+    <span style="color:#8f5902;font-style:italic"># Update the task object and check the task size</span>
+    <span style="color:#000;font-weight:bold">(</span><span style="color:#000">task</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">id</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">size</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#0000cf;font-weight:bold">4</span>
+</code></pre></div><h2 id="apiclient-and-configuration">ApiClient and configuration</h2>
+<p>The starting point in the low-level API is the <code>cvat_sdk.api_client.ApiClient</code> class.
+It encapsulates session and connection logic, manages headers and cookies,
+and provides access to various APIs.</p>
+<p>To create an instance of <code>ApiClient</code>, you need to set up a <code>cvat_sdk.api_client.Configuration</code>
+object and pass it to the <code>ApiClient</code> class constructor. Additional connection-specific
+options, such as extra headers and cookies can be specified in the class constructor.
+<code>ApiClient</code> implements the context manager protocol. Typically, you create <code>ApiClient</code> this way:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.api_client</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Configuration</span>
+
+<span style="color:#000">configuration</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">host</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;http://localhost&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">configuration</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><p>After creating an <code>ApiClient</code> instance, you can send requests to various server endpoints
+via <code>*_api</code> member properties and directly, using the <code>rest_client</code> member.
+<a href="#api-wrappers">Read more</a> about API wrappers below.</p>
+<p>Typically, the first thing you do with <code>ApiClient</code> is log in.
+<a href="#authentication">Read more</a> about authentication options below.</p>
+<h2 id="authentication">Authentication</h2>
+<p>CVAT supports 2 authentication options:</p>
+<ul>
+<li>basic auth, with your username and password</li>
+<li>token auth, with your API key</li>
+</ul>
+<p>Token auth requires a token, which can be obtained after performing the basic auth.</p>
+<p>The low-level API supports 2 ways of authentication.
+You can specify authentication parameters in the <code>Configuration</code> object:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">configuration</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;YOUR_USERNAME&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;YOUR_PASSWORD&#39;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">configuration</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">api_key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#34;sessionAuth&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&lt;sessionid cookie value&gt;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#34;csrfAuth&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&lt;csrftoken cookie value&gt;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#34;tokenAuth&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Token &lt;auth key value&gt;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>You can perform a regular login using the <code>auth_api</code> member of <code>ApiClient</code> and
+set the <code>Authorization</code> header using the <code>Token</code> prefix. This way, you&rsquo;ll be able to
+obtain API tokens, which can be reused in the future to avoid typing your credentials.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.api_client</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">models</span>
+
+<span style="color:#000;font-weight:bold">(</span><span style="color:#000">auth</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">auth_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create_login</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">LoginRequest</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">credentials</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">credentials</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">])</span>
+<span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#4e9a06">&#34;sessionid&#34;</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cookies</span>
+<span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#4e9a06">&#34;csrftoken&#34;</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cookies</span>
+<span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">set_default_header</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Authorization&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Token &#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">auth</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">key</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="api-wrappers">API wrappers</h2>
+<p>API endpoints are grouped by tags into separate classes in the <code>cvat_sdk.api_client.apis</code> package.</p>
+<p>APIs can be accessed as <code>ApiClient</code> object members:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">auth_api</span><span style="color:#ce5c00;font-weight:bold">.&lt;</span><span style="color:#000">operation</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.&lt;</span><span style="color:#000">operation</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>And APIs can be instantiated directly like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.api_client</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">apis</span>
+
+<span style="color:#000">api_client</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#000">auth_api</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">apis</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">AuthApi</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">auth_api</span><span style="color:#ce5c00;font-weight:bold">.&lt;</span><span style="color:#000">operation</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#000">tasks_api</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">apis</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">TasksApi</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.&lt;</span><span style="color:#000">operation</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>For each operation, the API wrapper class has a corresponding <code>&lt;operation&gt;_endpoint</code> member.
+This member represents the endpoint as a first-class object, which provides metainformation
+about the endpoint, such as the relative URL of the endpoint, parameter names,
+types and their placement in the request. It also allows to pass the operation to other
+functions and invoke it from there.</p>
+<p>For a typical server entity like <code>Task</code>, <code>Project</code>, <code>Job</code> etc., the <code>*Api</code> classes provide methods
+that reflect Create-Read-Update-Delete (CRUD) operations: <code>create</code>, <code>retrieve</code>, <code>list</code>, <code>update</code>,
+<code>partial_update</code>, <code>delete</code>. The set of available operations depends on the entity type.</p>
+<p>You can find the list of the available APIs and their documentation <a href="../reference/apis/">here</a>.</p>
+<h2 id="models">Models</h2>
+<p>Requests and responses can include data. It can be represented as plain Python
+data structures and model classes (or models). In CVAT API, model for requests and responses
+are separated: the request models have the <code>Request</code> suffix in the name, while the response
+models have no suffix. Models can be found in the <code>cvat_sdk.api_client.models</code> package.</p>
+<p>Models can be instantiated like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.api_client</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">models</span>
+
+<span style="color:#000">user_model</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">User</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>Model parameters can be passed as models, or as plain Python data structures. This rule applies
+recursively, starting from the method parameters. In particular, this means you can pass
+a dict into a method or into a model constructor, and corresponding fields will
+be parsed from this data automatically:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">task_spec</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">TaskWriteRequest</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;example task&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">labels</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">PatchedLabelRequest</span><span style="color:#000;font-weight:bold">(</span>
+            <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;car&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">color</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#ff00ff&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">attributes</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span>
+                <span style="color:#000">model</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">AttributeRequest</span><span style="color:#000;font-weight:bold">(</span>
+                    <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">mutable</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#3465a4">True</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">input_type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;number&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">default_value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">values</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;4&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">]</span>
+                <span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#000;font-weight:bold">]</span>
+        <span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">],</span>
+<span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">task_spec</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>Is equivalent to:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">({</span>
+    <span style="color:#4e9a06">&#39;name&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;example task&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#4e9a06">&#34;labels&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+        <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;car&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#ff00ff&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#34;attributes&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+            <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#4e9a06">&#34;mutable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">True</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#4e9a06">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;number&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#4e9a06">&#34;default_value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#4e9a06">&#34;values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;4&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">]</span>
+    <span style="color:#000;font-weight:bold">}],</span>
+<span style="color:#000;font-weight:bold">})</span>
+</code></pre></div><p>You can mix these variants.</p>
+<p>Most models provide corresponding interface classes called like <code>I&lt;model name&gt;</code>. They can be
+used to implement your own classes or describe APIs. They just provide type annotations
+and descriptions for model fields.</p>
+<p>You can export model values to plain Python dicts using the <code>as_dict()</code> method and
+the <code>cvat_sdk.api_client.model_utils.to_json()</code> function.</p>
+<p>You can find the list of the available models and their documentation <a href="../reference/models/">here</a>.</p>
+<h2 id="sending-requests">Sending requests</h2>
+<p>To send a request to a server endpoint, you need to obtain an instance of the corresponding <code>*Api</code>
+class. You can find summary about available API classes and supported endpoints
+<a href="../reference/apis">here</a>. The <code>*Api</code> instance object allows to send requests to the relevant
+server endpoints.</p>
+<p>By default, all operations return 2 objects: the parsed response data and the response itself.
+A typical call looks like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.api_client</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">apis</span>
+
+<span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">list</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#8f5902;font-style:italic"># process the response ...</span>
+</code></pre></div><p>Operation parameters can be passed as positional or keyword arguments. There are also several
+extra arguments which change invocation logic:</p>
+<ul>
+<li><code>_parse_response</code> - Allows to enable and disable response data parsing. When enabled,
+the response data is parsed into a model or a basic type and returned as the first value.
+When disabled, the response is not parsed, and <code>None</code> is returned. Can be useful,
+for instance, if you need to parse data manually, or if you expect an error in the response.</li>
+<li><code>_check_status</code> - Allows to enable or disable response status checks. When enabled, the
+response status code is checked to be positive as defined in the <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP standards</a>.
+In case of negative status, an exception is raised.</li>
+<li><code>_request_timeout</code> - Allows to control timeout</li>
+<li><code>_content_type</code> - Allows to specify the <code>Content-Type</code> header value for the request. Endpoints
+can support different content types and behave differently depending on the value. For file
+uploads <code>_content_type=&quot;multipart/form-data&quot;</code> must be specified.</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong>: the API is autogenerated. In some cases the server API schema may be incomplete
+or underspecified. Please report to us all the problems found. A typical problem is that a
+response data can&rsquo;t be parsed automatically due to the incorrect schema. In this case, the
+simplest workaround is to disable response parsing using the <code>_parse_response=False</code>
+method argument.</p>
+</blockquote>
+<p>You can find many examples of API client usage in REST API tests <a href="https://github.com/opencv/cvat/tree/develop/tests/python">here</a>.</p>
+<h3 id="organizations">Organizations</h3>
+<p>To call an operation in the context of an organization, use one of these method arguments:</p>
+<ul>
+<li><code>org</code> - The unique organization slug</li>
+<li><code>org_id</code>- The organization id</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ce5c00;font-weight:bold">...</span>
+<span style="color:#000;font-weight:bold">(</span><span style="color:#000">updated_annotations</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">partial_update_annotations</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#204a87">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">task_id</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">org_id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">org_id</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;update&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">patched_labeled_data_request</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">data</span>
+<span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="paginated-responses">Paginated responses</h3>
+<p>There are several endpoints that allow to request multiple server entities. Typically, these
+endpoints are called <code>list_...</code>. When there are lots of data, the responses can be paginated to
+reduce server load. If an endpoint returns paginated data, a single page is returned per request.
+In some cases all entries need to be retrieved. CVAT doesn&rsquo;t provide specific API or parameters
+for this, so the solution is to write a loop to collect and join data from multiple requests.
+SDK provides an utility function for this at <code>cvat_sdk.core.helpers.get_paginated_collection()</code>.</p>
+<p>Example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.core.helpers</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">get_paginated_collection</span>
+
+<span style="color:#ce5c00;font-weight:bold">...</span>
+<span style="color:#000">project_tasks</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">get_paginated_collection</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">projects_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">list_tasks_endpoint</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">project_id</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">)</span>
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d52545cf80fdbb2198fed55d851a9e90">3 - High-level API</h1>
+    
+	<h2 id="overview">Overview</h2>
+<p>This layer provides high-level APIs, allowing easier access to server operations.
+API includes <em>Repositories</em> and <em>Entities</em>. Repositories provide management
+operations for Entities. Entities represent objects on the server
+(e.g. projects, tasks, jobs etc) and simplify interaction with them. The key difference
+from the low-level API is that operations on this layer are not limited by a single
+server request per operation and encapsulate low-level request machinery behind a high-level
+object-oriented API.</p>
+<p>The code of this component is located in the <code>cvat_sdk.core</code> package.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">make_client</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">models</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk.core.proxies.tasks</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ResourceType</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Task</span>
+
+<span style="color:#8f5902;font-style:italic"># Create a Client instance bound to a local server and authenticate using basic auth</span>
+<span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">make_client</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">host</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;localhost&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">credentials</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;user&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;password&#39;</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#8f5902;font-style:italic"># Let&#39;s create a new task.</span>
+
+    <span style="color:#8f5902;font-style:italic"># Fill in task parameters first.</span>
+    <span style="color:#8f5902;font-style:italic"># Models are used the same way as in the layer 1.</span>
+    <span style="color:#000">task_spec</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;example task&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#34;labels&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+            <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;car&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#4e9a06">&#34;color&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#ff00ff&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#4e9a06">&#34;attributes&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+                    <span style="color:#000;font-weight:bold">{</span>
+                        <span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                        <span style="color:#4e9a06">&#34;mutable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">True</span><span style="color:#000;font-weight:bold">,</span>
+                        <span style="color:#4e9a06">&#34;input_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;number&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                        <span style="color:#4e9a06">&#34;default_value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span>
+                        <span style="color:#4e9a06">&#34;values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;4&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;5&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;6&#34;</span><span style="color:#000;font-weight:bold">],</span>
+                    <span style="color:#000;font-weight:bold">}</span>
+                <span style="color:#000;font-weight:bold">],</span>
+            <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">],</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+    <span style="color:#8f5902;font-style:italic"># Now we can create a task using a task repository method.</span>
+    <span style="color:#8f5902;font-style:italic"># Repositories can be accessed as the Client class members.</span>
+    <span style="color:#8f5902;font-style:italic"># In this case we use 2 local images as the task data.</span>
+    <span style="color:#000">task</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create_from_data</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">spec</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">task_spec</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">resource_type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">ResourceType</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">LOCAL</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">resources</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;image1.jpg&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;image2.png&#39;</span><span style="color:#000;font-weight:bold">],</span>
+    <span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#8f5902;font-style:italic"># The returned task object is already up-to-date with its server counterpart.</span>
+    <span style="color:#8f5902;font-style:italic"># Now we can access task fields. The fields are read-only and can be optional.</span>
+    <span style="color:#8f5902;font-style:italic"># Let&#39;s check that we have 2 images in the task data.</span>
+    <span style="color:#204a87;font-weight:bold">assert</span> <span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">size</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#0000cf;font-weight:bold">2</span>
+
+    <span style="color:#8f5902;font-style:italic"># If an object is modified on the server, the local object is not updated automatically.</span>
+    <span style="color:#8f5902;font-style:italic"># To reflect the latest changes, the local object needs to be fetch()-ed.</span>
+    <span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">fetch</span><span style="color:#000;font-weight:bold">()</span>
+
+    <span style="color:#8f5902;font-style:italic"># Let&#39;s obtain another task. Again, it can be done via the task repository.</span>
+    <span style="color:#8f5902;font-style:italic"># Suppose we have already created the task earlier and know the task id.</span>
+    <span style="color:#000">task2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">42</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#8f5902;font-style:italic"># The task object fields can be update()-d. Note that the set of fields that can be</span>
+    <span style="color:#8f5902;font-style:italic"># modified can be different from what is available for reading.</span>
+    <span style="color:#000">task2</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">update</span><span style="color:#000;font-weight:bold">({</span><span style="color:#4e9a06">&#39;name&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;my task&#39;</span><span style="color:#000;font-weight:bold">})</span>
+
+    <span style="color:#8f5902;font-style:italic"># And the task can also be remove()-d from the server. The local copy will remain</span>
+    <span style="color:#8f5902;font-style:italic"># untouched.</span>
+    <span style="color:#000">task2</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">remove</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><h2 id="client">Client</h2>
+<p>The <code>cvat_sdk.core.client.Client</code> class provides session management, implements
+authentication operations and simplifies access to server APIs.
+It is the starting point for using CVAT SDK.</p>
+<p>A <code>Client</code> instance allows you to:</p>
+<ul>
+<li>configure connection options with the <code>Config</code> class</li>
+<li>check server API compatibility with the current SDK version</li>
+<li>deduce server connection scheme (<code>https</code> or <code>http</code>) automatically</li>
+<li>manage user session with the <code>login()</code>, <code>logout()</code> and other methods</li>
+<li>obtain Repository objects with the <code>users</code>, <code>tasks</code>, <code>jobs</code> and other members</li>
+<li>reach to lower-level APIs with the corresponding members</li>
+</ul>
+<p>An instance of <code>Client</code> can be created directly by calling the class constructor
+or with the utility function <code>cvat_sdk.core.client.make_client()</code> which can handle
+some configuration for you. A <code>Client</code> can be configured with
+the <code>cvat_sdk.core.client.Config</code> class instance. A <code>Config</code> object can be passed to
+the <code>Client</code> constructor and then it will be available in the <code>Client.config</code> field.</p>
+<p>The <code>Client</code> class implements the <a href="https://docs.python.org/3/reference/datamodel.html#context-managers">context manager protocol</a>.
+When the context is closed, the session is finished, and the user is logged out
+automatically. Otherwise, these actions can be done with the <code>close()</code> and <code>logout()</code> methods.</p>
+<p>You can create and start using a <code>Client</code> instance this way:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">make_client</span>
+
+<span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">make_client</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;localhost&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">port</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;8080&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">credentials</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;user&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;password&#39;</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><p>The <code>make_client()</code> function handles configuration and object creation for you.
+It also allows to authenticate right after the object is created.</p>
+<p>If you need to configure <code>Client</code> parameters, you can do this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">cvat_sdk</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Config</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Client</span>
+
+<span style="color:#000">config</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Config</span><span style="color:#000;font-weight:bold">()</span>
+<span style="color:#8f5902;font-style:italic"># set up some config fields ...</span>
+
+<span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">Client</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;localhost:8080&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">config</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">config</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">login</span><span style="color:#000;font-weight:bold">((</span><span style="color:#4e9a06">&#39;user&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;password&#39;</span><span style="color:#000;font-weight:bold">))</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><p>You can specify server address both with and without the scheme. If the scheme is omitted,
+it will be deduced automatically.</p>
+<blockquote>
+<p>The checks are performed in the following
+order: <code>https</code> (with the default port 8080), <code>http</code> (with the default port 80).
+In some cases it may lead to incorrect results - e.g. you have 2 servers running on the
+same host at default ports. In such cases just specify the schema manually: <code>https://localhost</code>.</p>
+</blockquote>
+<p>When the server is located, its version is checked. If an unsupported version is found,
+an error can be raised or suppressed (controlled by <code>config.allow_unsupported_server</code>).
+If the error is suppressed, some SDK functions may not work as expected with this server.
+By default, a warning is raised and the error is suppressed.</p>
+<blockquote>
+<p>Please note that all <code>Client</code> operations rely on the server API and depend on the current user
+rights. This affects the set of available APIs, objects and actions. For example, a regular user
+can only see and modify their tasks and jobs, while an admin user can see all the tasks etc.</p>
+</blockquote>
+<h2 id="entities-and-repositories">Entities and Repositories</h2>
+<p><em>Entities</em> represent objects on the server. They provide read access to object fields
+and implement additional relevant operations, including both the general Read-Update-Delete and
+object-specific ones. The set of available general operations depends on the object type.</p>
+<p><em>Repositories</em> provide management operations for corresponding Entities. You don&rsquo;t
+need to create Repository objects manually. To obtain a Repository object, use the
+corresponding <code>Client</code> instance member:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">projects</span>
+<span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks</span>
+<span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">jobs</span>
+<span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">users</span>
+<span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><p>An Entity can be created on the server with the corresponding Repository method <code>create()</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">task</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">task</span> <span style="color:#000">config</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>We can retrieve server objects using the <code>retrieve()</code> and <code>list()</code> methods of the Repository:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">job</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">jobs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">job</span> <span style="color:#204a87">id</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">tasks</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">list</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><p>After calling these functions, we obtain local objects representing their server counterparts.</p>
+<p>Object fields can be updated with the <code>update()</code> method. Note that the set of fields that can be
+modified can be different from what is available for reading.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">job</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">update</span><span style="color:#000;font-weight:bold">({</span><span style="color:#4e9a06">&#39;stage&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;validation&#39;</span><span style="color:#000;font-weight:bold">})</span>
+</code></pre></div><p>The server object will be updated and the local object will reflect the latest object state
+after calling this operation.</p>
+<p>Note that local objects may fall out of sync with their server counterparts for different reasons.
+If you need to update the local object with the latest server state, use the <code>fetch()</code> method:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># obtain 2 local copies of the same job</span>
+<span style="color:#000">job_ref1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">jobs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">job_ref2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">jobs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic"># update the server object with the first reference</span>
+<span style="color:#000">job_ref1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">update</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic"># job_ref2 is outdated now</span>
+
+<span style="color:#000">job_ref2</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">fetch</span><span style="color:#000;font-weight:bold">()</span>
+<span style="color:#8f5902;font-style:italic"># job_ref2 is synced</span>
+</code></pre></div><p>Finally, if you need to remove the object from the server, you can use the <code>remove()</code> method.
+The server object will be removed, but the local copy of the object will remain untouched.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">task</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">tasks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">retrieve</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">task</span> <span style="color:#204a87">id</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">task</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">remove</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><p>Repositories can also provide group operations over entities. For instance, you can retrieve
+all available objects using the <code>list()</code> Repository method. The list of available
+Entity and Repository operations depends on the object type.</p>
+<p>You can learn more about entity members and how model parameters are passed to functions <a href="../lowlevel-api">here</a>.</p>
+<p>The implementation for these components is located in <code>cvat_sdk.core.proxies</code>.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d6ace9d6266b4c8cd2588a366fd7fad7">4 - Developer guide</h1>
+    
+	<h2 id="overview">Overview</h2>
+<p>This package contains manually written and autogenerated files. We store only sources in
+the repository. To get the full package, one need to generate missing package files.</p>
+<h2 id="package-file-layout">Package file layout</h2>
+<ul>
+<li><code>gen/</code> - generator files</li>
+<li><code>cvat_sdk/</code> - Python package root</li>
+<li><code>cvat_sdk/api_client</code> - autogenerated low-level package code</li>
+<li><code>cvat_sdk/core</code> - high-level package code</li>
+</ul>
+<h2 id="how-to-generate-package-code">How to generate package code</h2>
+<ol>
+<li>Obtain the server API schema</li>
+</ol>
+<p>If you have a local custom version of the server, run the following command in the terminal.
+You need to be able to execute django server. Server installation instructions are available
+<a href="../../../../docs/contributing/development-environment">here</a>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p cvat-sdk/schema/ <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> python manage.py spectacular --file cvat-sdk/schema/schema.yml
+</code></pre></div><p>If you want to use docker instead:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose -f docker-compose.yml -f docker-compose.dev.yml run <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    --no-deps --entrypoint <span style="color:#4e9a06">&#39;/usr/bin/env python&#39;</span> --rm -u <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>id -u<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>:<span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>id -g<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span> -v <span style="color:#4e9a06">&#34;</span><span style="color:#000">$PWD</span><span style="color:#4e9a06">&#34;</span>:<span style="color:#4e9a06">&#34;/local&#34;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    cvat_server <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    manage.py spectacular --file /local/cvat-sdk/schema/schema.yml
+</code></pre></div><p>If you don&rsquo;t have access to the server sources, but have a working instance,
+you can also get schema from <code>&lt;yourserver&gt;/api/docs</code>:</p>
+<p><img src="../../../../images/download_server_schema.png" alt="Download server schema button image"></p>
+<p>The official server schema for <code>app.cvat.ai</code> is available <a href="https://app.cvat.ai/api/docs/">here</a>.</p>
+<p>You can read more about server schema <a href="../../../../docs/api_sdk/api#api-schema">here</a>.</p>
+<ol start="2">
+<li>Install generator dependencies:</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install -r gen/requirements.txt
+</code></pre></div><ol start="3">
+<li>Generate package code (call from the package root directory!):</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gen/generate.sh
+</code></pre></div><ol start="4">
+<li>Install the packages:</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install cvat-sdk/
+pip install cvat-cli/
+</code></pre></div><p>If you want to edit package files, install them with <code>-e</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install -e cvat-sdk/
+pip install -e cvat-cli/
+</code></pre></div><h2 id="how-to-edit-templates">How to edit templates</h2>
+<p>If you want to edit templates, obtain them from the generator first:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm -v <span style="color:#000">$PWD</span>:/local <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    openapitools/openapi-generator-cli author template <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>        -o /local/generator_templates -g python
+</code></pre></div><p>Then, you can copy the modified version of the template you need into
+the <code>gen/templates/openapi-generator/</code> directory.</p>
+<p>Relevant links:</p>
+<ul>
+<li><a href="https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator/src/main/java/org/openapitools/codegen">Generator implementation, available variables in templates</a></li>
+<li><a href="https://github.com/OpenAPITools/openapi-generator/wiki/Mustache-Template-Variables">Mustache syntax in the generator</a></li>
+</ul>
+<h2 id="how-to-test">How to test</h2>
+<p>API client tests are integrated into REST API tests in <code>/tests/python/rest_api</code>
+and SDK tests are placed next to them in <code>/tests/python/sdk</code>.
+To execute, run:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pytest tests/python/rest_api tests/python/sdk
+</code></pre></div><h2 id="sdk-api-design-decisions">SDK API design decisions</h2>
+<p>The generated <code>ApiClient</code> code is modified from what <code>openapi-generator</code> does by default.
+Changes are mostly focused on better user experience - including better
+usage patterns and simpler/faster ways to achieve results.</p>
+<h3 id="modifications">Modifications</h3>
+<ul>
+<li>
+<p>Added Python type annotations for return types and class members.
+This change required us to implement a custom post-processing script,
+which converts generated types into correct type annotations. The types
+generated by default are supposed to work with the API implementation
+(parameter validation and parsing), but they are not applicable as
+type annotations (they have incorrect syntax). Custom post-processing
+allowed us to make these types correct type annotations.
+Other possible solutions:</p>
+<ul>
+<li>There is the <code>python-experimental</code> API generator, which may solve
+some issues, but it is unstable and requires python 3.9. Our API
+works with 3.7, which is the lowest supported version now.</li>
+<li>Custom templates - partially works, but only in limited cases
+(model fields). It&rsquo;s very hard to maintain the template code and
+logic for this. Only <code>if</code> checks and <code>for</code> loops are available in
+mustache templates, which is not enough for annotation generation.</li>
+</ul>
+</li>
+<li>
+<p>Separate APIs are embedded into the general <code>APIClient</code> class.
+Now we have:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">config</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">:</span>
+  <span style="color:#000">result1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">foo_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">operation1</span><span style="color:#000;font-weight:bold">()</span>
+  <span style="color:#000">result2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">api_client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">bar_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">operation2</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><p>This showed to be more convenient than the default:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">ApiClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">config</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">:</span>
+  <span style="color:#000">foo_api</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">FooApi</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#000">result1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">foo_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">operation1</span><span style="color:#000;font-weight:bold">()</span>
+  <span style="color:#000">result2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">foo_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">operation2</span><span style="color:#000;font-weight:bold">()</span>
+
+  <span style="color:#000">bar_api</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">BarApi</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">api_client</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#000">result3</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">bar_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">operation3</span><span style="color:#000;font-weight:bold">()</span>
+  <span style="color:#000">result4</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">bar_api</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">operation4</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><p>This also required custom post-processing. Operation Ids are
+<a href="https://swagger.io/specification/#operation-object">supposed to be unique</a>
+in the OpenAPI / Swagger specification. Therefore, we can&rsquo;t generate such
+schema on the server, nor we can&rsquo;t expect it to be supported in the
+API generator.</p>
+</li>
+<li>
+<p>Operations have IDs like <code>&lt;api&gt;/&lt;method&gt;_&lt;object&gt;</code>.
+This also showed to be more readable and more natural than DRF-spectacular&rsquo;s
+default <code>&lt;api&gt;/&lt;object&gt;_&lt;method&gt;</code>.</p>
+</li>
+<li>
+<p>Server operations have different types for input and output values.
+While it can be expected that an endopint with POST/PUT methods available
+(like <code>create</code> or <code>partial_update</code>) has the same type for input and output
+(because it looks natural), it also leads to the situation, in which there
+are lots of read-/write-only fields, and it becomes hard for understanding.
+This clear type separation is supposed to make it simpler for users.</p>
+</li>
+<li>
+<p>Added cookie management in the <code>ApiClient</code> class.</p>
+</li>
+<li>
+<p>Added interface classes for models to simplify class member usage and lookup.</p>
+</li>
+<li>
+<p>Dicts can be passed into API methods and model constructors instead of models.
+They are automatically parsed as models. In the original implementation, the user
+is required to pass a <code>Configuration</code> object each time, which is clumsy and adds little sense.</p>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-2 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Gitter public chat" aria-label="Gitter public chat">
+    <a class="text-white" rel="noopener noreferrer" href="https://gitter.im/opencv-cvat/public">
+      <i class="fab fa-gitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" rel="noopener noreferrer" href="https://stackoverflow.com/search?q=%23cvat">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="YouTube" aria-label="YouTube">
+    <a class="text-white" rel="noopener noreferrer" href="https://www.youtube.com/user/nmanovic">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-2 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" rel="noopener noreferrer" href="https://github.com/cvat-ai/cvat">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Forum on Intel Developer Zone" aria-label="Forum on Intel Developer Zone">
+    <a class="text-white" rel="noopener noreferrer" href="https://community.intel.com/t5/Intel-Distribution-of-OpenVINO/bd-p/distribution-openvino-toolkit">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Gitter developers chat" aria-label="Gitter developers chat">
+    <a class="text-white" rel="noopener noreferrer" href="https://gitter.im/opencv-cvat/dev">
+      <i class="fab fa-gitter"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-8 text-center order-sm-2">
+        
+        |
+        <small class="mx-1"><a href="https://www.cvat.ai/terms-of-use">Terms of Use</a></small>
+      </div>
+  
+    <p class="mt-2"><a href="../../../../about/">About</a></p>
+  
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../../../../js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js" integrity="sha256-OxcsE7YsK&#43;qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin="anonymous"></script>
+
+
+
+<script src='../../../../js/prism.js'></script>
+
+
+
+  </body>
+</html>
